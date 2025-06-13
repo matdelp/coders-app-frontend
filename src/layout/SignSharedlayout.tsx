@@ -5,6 +5,7 @@ export type SignPagesProp = {
   title: string;
   message: string;
   link: string;
+  path: string;
 };
 
 export const SignSharedlayout: React.FC<SignPagesProp> = (params) => {
@@ -19,7 +20,8 @@ export const SignSharedlayout: React.FC<SignPagesProp> = (params) => {
           {params.children}
           <p className="py-1">
             {params.message}
-            <NavLink className="text-main-500" to="/signin">
+            {"  "}
+            <NavLink className="text-main-500" to={params.path}>
               {params.link}
             </NavLink>
           </p>

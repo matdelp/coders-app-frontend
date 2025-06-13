@@ -3,19 +3,19 @@
 //     <title>Signin Page</title>
 
 import React from "react";
-import { SignUpForm } from "../../components/signUpForm";
+import { SignInForm } from "../../components/signInForm";
 import {
   SignSharedlayout,
   type SignPagesProp,
 } from "../../layout/SignSharedlayout";
 
-export const SignUpPage: React.FC = () => {
-  const signUpProps: SignPagesProp = {
-    children: <SignUpForm />,
+export const SignInPage: React.FC = () => {
+  const signInProps: SignPagesProp = {
+    children: <SignInForm />,
     title: "Join Coders now !",
-    message: "Already have an account?",
-    link: "Login",
-    path: "/signin",
+    message: "New to code CLA?",
+    link: "Sign Up",
+    path: "/signup",
   };
-  return <SignSharedlayout {...signUpProps} />;
+  return <SignSharedlayout {...signInProps} />;
 };
