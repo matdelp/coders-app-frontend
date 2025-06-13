@@ -3,7 +3,7 @@
 //     <title>Signin Page</title>
 
 import React from "react";
-import { SignInForm } from "../../components/signInForm";
+import { SignInForm } from "../../components/SignInForm";
 import {
   SignSharedlayout,
   type SignPagesProp,
