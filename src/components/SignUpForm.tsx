@@ -1,4 +1,5 @@
 import React from "react";
+import { Input } from "./Input";
 
 export const SignUpForm: React.FC = () => {
   return (
@@ -8,30 +9,10 @@ export const SignUpForm: React.FC = () => {
         action=""
         method="post"
       >
-        <input
-          className="p-2 bg-background-500 rounded-md text-main-100 w-full"
-          type="text"
-          id="firstName"
-          placeholder="First Name"
-        />
-        <input
-          className="p-2 bg-background-500 rounded-md text-main-100 w-full"
-          type="text"
-          id="lastName"
-          placeholder="Last Name"
-        />
-        <input
-          className="p-2 bg-background-500 rounded-md text-main-100 w-full"
-          type="email"
-          id="email"
-          placeholder="Email"
-        />
-        <input
-          className="p-2 bg-background-500 rounded-md text-main-100 w-full"
-          type="password"
-          id="password"
-          placeholder="Password"
-        />
+        <Input type="text" id="firstName" placeholder="First Name" />
+        <Input type="text" id="lastName" placeholder="Last Name" />
+        <Input type="email" id="email" placeholder="Email" />
+        <Input type="password" id="password" placeholder="Password" />
         <button
           className="px-2 py-1 bg-blue-500 rounded-md text-main-100 w-full"
           type="submit"
