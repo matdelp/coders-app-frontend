@@ -1,39 +1,33 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { MdLightMode } from "react-icons/md";
+import logo from "../assets/images/logo.svg";
+import user from "../assets/images/user.png";
 
 export const LeaderHeader: React.FC = () => {
   return (
-    <header className="flex justify-between py-5 xl:px-4 px-2 bg-main-100">
-      <div className="flex flex-col xl:flex-row gap-5 items-start xl:items-center">
+    <header className="flex justify-between py-3 xl:py-5 px-2 xl:px-4  bg-main-100">
+      <div className="flex flex-col xl:flex-row gap-3 xl:gap-5 items-start xl:items-center">
         <div className="flex gap-2 items-center">
-          <div className="flex xl:h-12 xl:w-12 items-center justify-center">
-            <img
-              className="h-10 w-10 object-contain"
-              src="src/assets/images/logo.svg"
-              alt="CLA logo"
-            />
+          <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
+            <img className="object-contain" src={logo} alt="CLA logo" />
           </div>
-          <p className="text-xl font-semibold">CodeCla</p>
+          <p className="xl:text-xl text-xs font-semibold">CodeCla</p>
+          <ul className="flex gap-3 xl:gap-5 xl:text-xl text-xs font-semibold">
+            <li>
+              <NavLink to="/challenges">Challenges</NavLink>
+            </li>
+            <li>
+              <NavLink to="/leaderboard">Leaderboard</NavLink>
+            </li>
+          </ul>
         </div>
-        <ul className="flex gap-5 text-lg xl:text-xl font-semibold">
-          <li>
-            <NavLink to="/challenges">Challenges</NavLink>
-          </li>
-          <li>
-            <NavLink to="/leaderboard">Leaderboard</NavLink>
-          </li>
-        </ul>
       </div>
-      <div className="flex  items-start">
-        <div className="flex h-10 w-10 xl:h-15 xl:w-15 items-center justify-center">
-          <img
-            src="src/assets/images/user.png"
-            alt="user"
-            className="object-cover rounded-full"
-          />
+      <div className="flex items-start gap-2">
+        <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
+          <img src={user} alt="user" className="object-cover rounded-full" />
         </div>
-        <div className="flex h-10 w-10 xl:h-15 xl:w-15 items-center justify-center">
+        <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
           <MdLightMode />
         </div>
       </div>
