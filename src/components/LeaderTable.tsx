@@ -18,10 +18,7 @@ export const LeaderTable: React.FC<LeaderTableProps> = ({ data }) => {
       </thead>
       <tbody>
         {data.map((user, index) => (
-          <tr
-            key={index}
-            className="border border-b-1 border-t-0 border-gray-400 h-10"
-          >
+          <tr key={index} className="border-b-1 border-gray-400 h-10">
             <td>{user.rank}</td>
             <td>
               {user.first_name}
