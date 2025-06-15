@@ -16,7 +16,7 @@ export const ProfilPage: React.FC = () => {
   return (
     <>
       <LeaderHeader />
-      <div className="p-5">
+      <div className="p-5 flex gap-3 flex-col">
         <div className="flex xl:flex-row justify-between items-center">
           <ProfilPicture />
           <p className="text-sm bg-gray-200 px-3 py-1 rounded-full self-center">
