@@ -23,7 +23,7 @@ export const Input: React.FC<InputProps> = ({ type, id, placeholder }) => {
     ...(type === "password" && {
       pattern: {
         value:
-          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-])[A-Za-z\d!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]{8,}$/,
+          /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}[\]:;<>,.?~\\/-])[A-Za-z\d!@#$%^&*()_+{}[\]:;<>,.?~\\/-]{8,}$/,
         message:
           "Password must contain at least 8 characters, one uppercase, one lowercase, one digit and a special character",
       },
