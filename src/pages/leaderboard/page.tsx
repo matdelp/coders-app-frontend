@@ -3,7 +3,7 @@ import { LeaderTable } from "../../components/LeaderTable";
 import { dummyData } from "../../assets/dummyData/data";
 import { LeaderHeader } from "../../components/LeaderHeader";
 
-export const LeaderbordPage: React.FC = () => {
+export const LeaderboardPage: React.FC = () => {
   return (
     <div className="bg-background-100 w-screen h-screen gap-2 flex flex-col">
       <LeaderHeader />
