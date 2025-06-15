@@ -23,7 +23,7 @@ export const SignInForm: React.FC = () => {
           <Input type="email" id="email" placeholder="Email" />
           <Input type="password" id="password" placeholder="Password" />
           <button
-            className="px-2 py-1 bg-blue-500 rounded-md text-main-100 w-full"
+            className="px-2 py-1 bg-blue-500 rounded-md text-main-100 w-full cursor-pointer"
             type="submit"
             onClick={onSubmit}
           >
