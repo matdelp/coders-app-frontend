@@ -9,13 +9,26 @@ export const ChallengesTracker: React.FC<ChallengesTrackerProps> = ({
   data,
 }) => {
   return (
-    <>
+    <div className="flex flex-col gap-1">
       <ProgressBar
         label="Easy"
         style="h-full bg-green-400 rounded-md text-background-100 flex items-center justify-end p-1 text-xs"
-        data={data}
+        value={data.easy}
+        difficulty="easy"
       />
-    </>
+      <ProgressBar
+        label="Moderate"
+        style="h-full bg-yellow-400 rounded-md text-background-100 flex items-center justify-end p-1 text-xs"
+        value={data.moderate}
+        difficulty="moderate"
+      />
+      <ProgressBar
+        label="Hard"
+        style="h-full bg-red-400 rounded-md text-background-100 flex items-center justify-end p-1 text-xs"
+        value={data.hard}
+        difficulty="hard"
+      />
+    </div>
   );
 };
 //
