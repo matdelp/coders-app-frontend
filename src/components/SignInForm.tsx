@@ -20,8 +20,18 @@ export const SignInForm: React.FC = () => {
           action=""
           method="post"
         >
-          <Input type="email" id="email" placeholder="Email" />
-          <Input type="password" id="password" placeholder="Password" />
+          <Input
+            type="email"
+            id="email"
+            placeholder="Email"
+            style="p-2 bg-background-500 rounded-md text-main-100 w-full"
+          />
+          <Input
+            type="password"
+            id="password"
+            placeholder="Password"
+            style="p-2 bg-background-500 rounded-md text-main-100 w-full"
+          />
           <button
             className="px-2 py-1 bg-blue-500 rounded-md text-main-100 w-full cursor-pointer"
             type="submit"

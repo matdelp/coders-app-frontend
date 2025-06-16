@@ -5,7 +5,7 @@ import { ProtectedRoute } from "./components/ProtectedPage";
 import { UserOnlyPage } from "./pages/userOnly/page";
 import { SignInPage } from "./pages/signin/page";
 import { LeaderboardPage } from "./pages/leaderboard/page";
-import { ProfilPage } from "./pages/profil/ProfilPage";
+import { ProfilPage } from "./pages/profile/ProfilePage";
 
 export const App = () => {
   return (
@@ -15,7 +15,7 @@ export const App = () => {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/leaderboard" element={<LeaderboardPage />} />
-        <Route path="/profil/:userId" element={<ProfilPage />} />
+        <Route path="/profile/:userId" element={<ProfilPage />} />
         <Route
           path="/useronly"
           element={

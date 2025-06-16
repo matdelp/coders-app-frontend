@@ -5,9 +5,15 @@ type InputProps = {
   type: "text" | "password" | "email" | "number";
   id: string;
   placeholder: string;
+  style: string;
 };
 
-export const Input: React.FC<InputProps> = ({ type, id, placeholder }) => {
+export const Input: React.FC<InputProps> = ({
+  type,
+  id,
+  placeholder,
+  style,
+}) => {
   const {
     register,
     formState: { errors },
@@ -38,7 +44,8 @@ export const Input: React.FC<InputProps> = ({ type, id, placeholder }) => {
   return (
     <>
       <input
-        className="p-2 bg-background-500 rounded-md text-main-100 w-full"
+        required
+        className={style}
         type={type}
         id={id}
         placeholder={placeholder}
