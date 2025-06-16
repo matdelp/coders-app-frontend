@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { LeaderHeader } from "../../components/LeaderHeader";
 import { ProfilePicture } from "../../components/ProfilePicture";
 import { ProfileForm } from "../../components/ProfileForm";
+import { ChallengesTracker } from "../../components/ChallengesTracker";
+import { challenges } from "../../assets/dummyData/challenges";
 
 const addUpperCase = (str: string): string =>
   str.charAt(0).toUpperCase() + str.slice(1);
@@ -15,7 +17,7 @@ export const ProfilPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-background-100">
+    <div className="bg-background-100 min-h-screen">
       <LeaderHeader />
       <div className="p-5 flex gap-3 flex-col">
         <div className="flex xl:flex-row justify-between items-center">
@@ -26,7 +28,7 @@ export const ProfilPage: React.FC = () => {
         </div>
         <div>{renderName(userId)}</div>
         <ProfileForm />
-        <div>challenge</div>
+        <ChallengesTracker data={challenges} />
         <div>coding strike</div>
       </div>
     </div>
