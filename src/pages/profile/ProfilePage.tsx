@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { LeaderHeader } from "../../components/LeaderHeader";
-import { ProfilPicture } from "../../components/ProfilPicture";
+import { ProfilePicture } from "../../components/ProfilePicture";
+import { ProfileForm } from "../../components/ProfileForm";
 
 const addUpperCase = (str: string): string =>
   str.charAt(0).toUpperCase() + str.slice(1);
@@ -14,20 +15,20 @@ export const ProfilPage: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="bg-background-100">
       <LeaderHeader />
       <div className="p-5 flex gap-3 flex-col">
         <div className="flex xl:flex-row justify-between items-center">
-          <ProfilPicture />
+          <ProfilePicture />
           <p className="text-sm bg-gray-200 px-3 py-1 rounded-full self-center">
             Rank: 24
           </p>
         </div>
         <div>{renderName(userId)}</div>
-        <div>form</div>
+        <ProfileForm />
         <div>challenge</div>
         <div>coding strike</div>
       </div>
-    </>
+    </div>
   );
 };

@@ -2,8 +2,8 @@ import React, { useRef, useState } from "react";
 import userPlaceholder from "../assets/images/userPlaceholder.jpg";
 import { FaPen } from "react-icons/fa";
 
-export const ProfilPicture = () => {
-  const [imgUrl, setImgUrl] = useState<string>("");
+export const ProfilePicture = () => {
+  const [imgUrl, setImgUrl] = useState<string | null>(null);
   const refImg = useRef<HTMLInputElement>(null);
 
   const handleImgChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -14,9 +14,7 @@ export const ProfilPicture = () => {
     }
   };
   const handleEditClick = () => {
-    if (refImg.current) {
-      refImg.current.click();
-    }
+    refImg.current?.click();
   };
 
   return (
