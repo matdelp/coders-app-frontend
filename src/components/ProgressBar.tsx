@@ -13,7 +13,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
   data,
 }) => {
   return (
-    <div>
+    <div className="flex flex-col items-center w-full">
       <label htmlFor="easy" className="font-light">
         {label}
       </label>
