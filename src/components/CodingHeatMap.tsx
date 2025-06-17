@@ -20,6 +20,7 @@ export const CodingHeatMap: React.FC = () => {
         startDate={new Date("2025-01-01")}
         endDate={new Date("2025-12-30")}
         values={heatMapData}
+        showWeekdayLabels={true}
         classForValue={(value) => {
           if (!value) {
             return "color-empty";
