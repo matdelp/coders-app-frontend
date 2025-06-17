@@ -14,16 +14,19 @@ export const CodingHeatMap: React.FC = () => {
   };
 
   return (
-    <CalendarHeatmap
-      startDate={new Date("2025-01-01")}
-      endDate={new Date("2025-12-30")}
-      values={heatMapData}
-      classForValue={(value) => {
-        if (!value) {
-          return "color-empty";
-        }
-        return GetColorFromCount(value.count, "light") || "color-empty";
-      }}
-    />
+    <>
+      <h2 className="text-center">Your Coding strikes</h2>
+      <CalendarHeatmap
+        startDate={new Date("2025-01-01")}
+        endDate={new Date("2025-12-30")}
+        values={heatMapData}
+        classForValue={(value) => {
+          if (!value) {
+            return "color-empty";
+          }
+          return GetColorFromCount(value.count, "light") || "color-empty";
+        }}
+      />
+    </>
   );
 };
