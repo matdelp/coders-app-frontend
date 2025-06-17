@@ -3,7 +3,11 @@ import { heatMapData } from "../assets/dummyData/heatmap";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "../assets/css/heatmap-module.css";
 
-export const CodingHeatMap: React.FC = () => {
+type CodingHeatMapProps = {
+  mode: string;
+};
+
+export const CodingHeatMap: React.FC<CodingHeatMapProps> = ({ mode }) => {
   const GetColorFromCount = (count: number, mode: string) => {
     if (count < 2) return `color-scale-0-${mode}`;
     if (count >= 2 && count < 4) return `color-scale-2-${mode}`;
@@ -25,7 +29,7 @@ export const CodingHeatMap: React.FC = () => {
           if (!value) {
             return "color-empty";
           }
-          return GetColorFromCount(value.count, "light") || "color-empty";
+          return GetColorFromCount(value.count, mode) || "color-empty";
         }}
       />
     </>
