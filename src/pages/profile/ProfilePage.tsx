@@ -5,6 +5,7 @@ import { ProfilePicture } from "../../components/ProfilePicture";
 import { ProfileForm } from "../../components/ProfileForm";
 import { ChallengesTracker } from "../../components/ChallengesTracker";
 import { challenges } from "../../assets/dummyData/challenges";
+import { CodingHeatMap } from "../../components/CodingHeatMap";
 
 const addUpperCase = (str: string): string =>
   str.charAt(0).toUpperCase() + str.slice(1);
@@ -29,7 +30,7 @@ export const ProfilPage: React.FC = () => {
         <div>{renderName(userId)}</div>
         <ProfileForm />
         <ChallengesTracker data={challenges} />
-        <div>coding strike</div>
+        <CodingHeatMap />
       </div>
     </div>
   );
