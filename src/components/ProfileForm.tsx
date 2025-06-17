@@ -26,7 +26,7 @@ export const ProfileForm: React.FC = () => {
               type="text"
               id="firstName"
               placeholder=""
-              style="p-2 border border-gray-300 rounded-md text-gray-500 w-full"
+              style="p-2 border border-gray-300 rounded-md text-gray-500 w-full dark:text-main-100 dark:bg-main-500"
             />
           </div>
           <div className="flex flex-col items-start gap-1">
@@ -35,7 +35,7 @@ export const ProfileForm: React.FC = () => {
               type="text"
               id="lastName"
               placeholder=""
-              style="p-2 border border-gray-300 rounded-md text-gray-500 w-full"
+              style="p-2 border border-gray-300 rounded-md text-gray-500 w-full dark:text-main-100 dark:bg-main-500"
             />
           </div>
           <div className="flex flex-col items-start gap-1">
@@ -45,7 +45,7 @@ export const ProfileForm: React.FC = () => {
               type="text"
               id="email"
               placeholder="email@domain.com"
-              className="p-2 border border-gray-300 rounded-md text-gray-500 w-full"
+              className="p-2 border border-gray-300 rounded-md text-gray-500 w-full dark:text-main-100 dark:bg-main-500"
             />
           </div>
           <div className="flex flex-col items-start gap-1">
@@ -53,12 +53,12 @@ export const ProfileForm: React.FC = () => {
             <textarea
               id="about"
               placeholder="About"
-              className="p-2 border border-gray-300 rounded-md text-gray-500 w-full"
+              className="p-2 border border-gray-300 rounded-md text-gray-500 w-full dark:text-main-100 dark:bg-main-500"
             />
           </div>
           <div className="flex justify-end">
             <button
-              className="px-2 py-1 bg-blue-500 rounded-md text-main-100 w-fit cursor-pointer"
+              className="px-2 py-1 bg-blue-500 dark:bg-background-500 rounded-md text-main-100 w-fit cursor-pointer"
               type="submit"
               onClick={onSubmit}
             >
