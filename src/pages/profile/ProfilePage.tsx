@@ -18,13 +18,13 @@ export const ProfilPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-background-100 min-h-screen min-w-screen">
+    <div className="bg-background-100 dark:bg-main-500 dark:text-main-100 font-semibold min-h-screen min-w-screen">
       <LeaderHeader />
       <div className="p-5 flex gap-5 flex-col xl:flex-row w-full">
         <div className="flex flex-2 flex-col gap-5 p-5">
           <div className="flex xl:flex-row justify-between items-center">
             <ProfilePicture />
-            <p className="text-sm bg-gray-200 px-3 py-1 rounded-full self-center">
+            <p className="text-sm bg-gray-200 dark:bg-transparent px-3 py-1 rounded-full self-center">
               Rank: 24
             </p>
           </div>
@@ -33,9 +33,11 @@ export const ProfilPage: React.FC = () => {
         </div>
         <div className="flex flex-col flex-1 gap-4 xl:gap-6">
           <ChallengesTracker data={challenges} />
-          <CodingHeatMap />
+          <CodingHeatMap mode={"dark"} />
         </div>
       </div>
     </div>
   );
 };
+
+//TO DO: set up toggle for Light to Dark instead of hardcodding mode to "dark"
