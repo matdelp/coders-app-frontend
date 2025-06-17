@@ -12,15 +12,17 @@ export const LeaderHeader: React.FC = () => {
           <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
             <img className="object-contain" src={logo} alt="CLA logo" />
           </div>
-          <p className="xl:text-xl text-xs font-semibold">CodeCla</p>
-          <ul className="flex gap-3 xl:gap-5 xl:text-xl text-xs font-semibold">
-            <li>
-              <NavLink to="/challenges">Challenges</NavLink>
-            </li>
-            <li>
-              <NavLink to="/leaderboard">Leaderboard</NavLink>
-            </li>
-          </ul>
+          <div className="flex xl:gap-10 gap-5">
+            <p className="xl:text-xl text-xs font-semibold">CodeCla</p>
+            <ul className="flex gap-3 xl:gap-5 xl:text-xl text-xs font-semibold">
+              <li>
+                <NavLink to="/challenges">Challenges</NavLink>
+              </li>
+              <li>
+                <NavLink to="/leaderboard">Leaderboard</NavLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div className="flex items-start gap-2">
