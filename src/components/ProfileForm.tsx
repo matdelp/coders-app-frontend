@@ -16,7 +16,7 @@ export const ProfileForm: React.FC = () => {
         <form
           onSubmit={(e) => e.preventDefault()}
           noValidate
-          className="flex flex-col justify-center gap-2 w-full"
+          className="flex flex-col justify-center gap-5 w-full"
           action=""
           method="post"
         >

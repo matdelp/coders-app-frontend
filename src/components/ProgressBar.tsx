@@ -15,7 +15,7 @@ export const ProgressBar: React.FC<ProgressBarProps> = ({
 }) => {
   return (
     <div className="flex flex-col items-center w-full">
-      <label htmlFor={difficulty} className="font-light">
+      <label htmlFor={difficulty}>
         {label}
       </label>
       <div className="w-full h-4 bg-gray-300 rounded-md overflow-hidden">

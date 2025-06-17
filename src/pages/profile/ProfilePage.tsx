@@ -18,17 +18,17 @@ export const ProfilPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-background-100 dark:bg-main-500 dark:text-main-100 font-semibold min-h-screen min-w-screen">
+    <div className="bg-background-100 dark:bg-main-500 dark:text-main-100 font-semibold xl:text-xl min-h-screen min-w-screen">
       <LeaderHeader />
       <div className="p-5 flex gap-5 flex-col xl:flex-row w-full">
         <div className="flex flex-2 flex-col gap-5 p-5">
           <div className="flex xl:flex-row justify-between items-center">
             <ProfilePicture />
-            <p className="text-sm bg-gray-200 dark:bg-transparent px-3 py-1 rounded-full self-center">
+            <p className="text-xl xl:text-2xl bg-gray-200 dark:bg-transparent px-3 py-1 rounded-full self-center">
               Rank: 24
             </p>
           </div>
-          <div>{renderName(userId)}</div>
+          <div className="xl:text-4xl text-2xl xl:py-5 py-3">{renderName(userId)}</div>
           <ProfileForm />
         </div>
         <div className="flex flex-col flex-1 gap-4 xl:gap-6">

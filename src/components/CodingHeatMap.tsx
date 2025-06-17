@@ -18,8 +18,8 @@ export const CodingHeatMap: React.FC<CodingHeatMapProps> = ({ mode }) => {
   };
 
   return (
-    <>
-      <h2 className="text-center">Your Coding strikes</h2>
+    <div className="xl:py-10">
+      <h2 className="text-center text-xl xl:text-3xl py-5">Your Coding strikes</h2>
       <CalendarHeatmap
         startDate={new Date("2025-01-01")}
         endDate={new Date("2025-12-30")}
@@ -32,6 +32,6 @@ export const CodingHeatMap: React.FC<CodingHeatMapProps> = ({ mode }) => {
           return GetColorFromCount(value.count, mode) || "color-empty";
         }}
       />
-    </>
+    </div>
   );
 };
