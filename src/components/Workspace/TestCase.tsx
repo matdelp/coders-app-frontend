@@ -27,7 +27,7 @@ export const TestCase: React.FC = () => {
           <>
             <button
               key={id}
-              className={`px-4 py-2 rounded text-sm font-medium cursor-pointer
+              className={`px-4 py-2 rounded text-xs xl:text-sm font-medium cursor-pointer
               ${
                 caseId?.id === test.id
                   ? "bg-main-500 text-white"
@@ -43,28 +43,28 @@ export const TestCase: React.FC = () => {
       {caseId && (
         <form className="flex flex-col gap-3">
           <div className="gap-1">
-            <label htmlFor="input">Input:</label>
+            <label htmlFor="input" className="text-md">Input:</label>
             <input
               id="input"
               value={caseId.inputText}
               readOnly
-              className="bg-main-100 p-2 rounded-md w-full"
+              className="bg-main-100 p-2 rounded-md w-full text-sm xl:text-lg"
             ></input>
           </div>
           <div>
-            <label htmlFor="output">Output:</label>
+            <label htmlFor="output" className="text-md">Output:</label>
             <input
               id="output"
               value={caseId.outputText}
               readOnly
-              className="bg-main-100 p-2 rounded-md w-full"
+              className="bg-main-100 p-2 rounded-md w-full text-sm xl:text-lg"
             ></input>
           </div>
           <div className="flex justify-end">
             <button
               type="submit"
               onClick={() => alert("not implemented yet")}
-              className="bg-main-100 rounded-md py-1 px-2 w-fit cursor-pointer"
+              className="bg-main-100 rounded-md py-1 px-2 w-fit cursor-pointer text-xs xl:text-sm"
             >
               Submit
             </button>
