@@ -1,5 +1,5 @@
 import React from "react";
-import { type LeaderbordData } from "../assets/dummyData/data";
+import type { LeaderbordData } from "../../assets/dummyData/data";
 
 type LeaderTableProps = {
   data: LeaderbordData[];

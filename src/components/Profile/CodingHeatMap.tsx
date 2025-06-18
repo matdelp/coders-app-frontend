@@ -1,7 +1,7 @@
 import React from "react";
 import { heatMapData } from "../../assets/dummyData/heatmap";
 import CalendarHeatmap from "react-calendar-heatmap";
-import "../assets/css/heatmap-module.css";
+import "../../assets/css/heatmap-module.css";
 
 type CodingHeatMapProps = {
   mode: string;

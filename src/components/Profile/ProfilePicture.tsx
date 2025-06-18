@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import userPlaceholder from "../assets/images/userPlaceholder.jpg";
+import userPlaceholder from "../../assets/images/userPlaceholder.jpg";
 import { FaPen } from "react-icons/fa";
 
 export const ProfilePicture = () => {
