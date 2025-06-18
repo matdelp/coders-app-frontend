@@ -39,7 +39,7 @@ table in constant time, reducing the time complexity to O(n).`, // md content,
         outputText: `6`,
       },
       {
-        id: "test_2",
+        id: 2,
         input: {}, // Not used here
         inputText: `[2, 3]`,
         output: {}, // Not used here

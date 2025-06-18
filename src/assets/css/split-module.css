@@ -1,10 +1,16 @@
 .gutter {
-  background-color: #e2e8f0; /* light gray */
+  background-color: white;
   background-clip: content-box;
-  cursor: col-resize;
 }
 
 .gutter.gutter-horizontal {
   width: 2px;
   height: 100%;
+  cursor: col-resize;
+}
+
+.gutter.gutter-vertical {
+  height: 2px;
+  width: 100%;
+  cursor: row-resize;
 }

@@ -3,6 +3,7 @@ import Split from "react-split";
 import "../../assets/css/split-module.css";
 import { ChallengeDescription } from "../../components/Workspace/ChallengeDescription";
 import { SharedHeader } from "../../components/SharedHeader";
+import { Playground } from "../../components/Workspace/Playground";
 
 export const WorkspacePage: React.FC = () => {
   return (
@@ -23,7 +24,9 @@ export const WorkspacePage: React.FC = () => {
         <div className="bg-background-100 h-full overflow-auto">
           <ChallengeDescription />
         </div>
-        <div className="bg-blue-900 h-full  overflow-auto">Playground</div>
+        <div className="bg-background-100 h-full overflow-auto">
+          <Playground />
+        </div>
       </Split>
     </div>
   );
