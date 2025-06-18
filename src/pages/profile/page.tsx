@@ -1,11 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { LeaderHeader } from "../../components/LeaderHeader";
-import { ProfilePicture } from "../../components/ProfilePicture";
-import { ProfileForm } from "../../components/ProfileForm";
-import { ChallengesTracker } from "../../components/ChallengesTracker";
+import { SharedHeader } from "../../components/SharedHeader";
+import { ProfilePicture } from "../../components/Profile/ProfilePicture";
+import { ChallengesTracker } from "../../components/Profile/ChallengesTracker";
 import { challenges } from "../../assets/dummyData/challenges";
-import { CodingHeatMap } from "../../components/CodingHeatMap";
+import { CodingHeatMap } from "../../components/Profile/CodingHeatMap";
+import { ProfileForm } from "../../components/Profile/ProfileForm";
 
 const addUpperCase = (str: string): string =>
   str.charAt(0).toUpperCase() + str.slice(1);
@@ -19,7 +19,7 @@ export const ProfilPage: React.FC = () => {
 
   return (
     <div className="bg-background-100 dark:bg-main-500 dark:text-main-100 font-semibold xl:text-xl min-h-screen min-w-screen">
-      <LeaderHeader />
+      <SharedHeader />
       <div className="p-5 flex gap-5 flex-col xl:flex-row w-full">
         <div className="flex flex-2 flex-col gap-5 p-5">
           <div className="flex xl:flex-row justify-between items-center">
@@ -28,7 +28,9 @@ export const ProfilPage: React.FC = () => {
               Rank: 24
             </p>
           </div>
-          <div className="xl:text-4xl text-2xl xl:py-5 py-3">{renderName(userId)}</div>
+          <div className="xl:text-4xl text-2xl xl:py-5 py-3">
+            {renderName(userId)}
+          </div>
           <ProfileForm />
         </div>
         <div className="flex flex-col flex-1 gap-4 xl:gap-6">

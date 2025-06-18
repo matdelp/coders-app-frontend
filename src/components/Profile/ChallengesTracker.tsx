@@ -1,5 +1,5 @@
 import React from "react";
-import { type ChallengeData } from "../assets/dummyData/challenges";
+import { type ChallengeData } from "../../assets/dummyData/challenges";
 import { ProgressBar } from "./ProgressBar";
 
 type ChallengesTrackerProps = {
@@ -10,7 +10,9 @@ export const ChallengesTracker: React.FC<ChallengesTrackerProps> = ({
 }) => {
   return (
     <div className="flex flex-col gap-5 py-5">
-      <h2 className="text-center text-xl xl:text-3xl xl:py-5">Completed Challenges</h2>
+      <h2 className="text-center text-xl xl:text-3xl xl:py-5">
+        Completed Challenges
+      </h2>
       <ProgressBar
         label="Easy"
         style="h-full bg-green-400 rounded-md text-background-100 flex items-center justify-end p-1 text-xs"

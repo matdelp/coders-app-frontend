@@ -4,7 +4,7 @@ import { MdLightMode } from "react-icons/md";
 import logo from "../assets/images/logo.svg";
 import user from "../assets/images/user.png";
 
-export const LeaderHeader: React.FC = () => {
+export const SharedHeader: React.FC = () => {
   return (
     <header className="flex justify-between py-3 xl:py-5 px-2 xl:px-4  bg-main-100 dark:bg-background-500 dark:text-main-100">
       <div className="flex flex-col xl:flex-row gap-3 xl:gap-5 items-start xl:items-center">

@@ -1,5 +1,5 @@
 import React from "react";
-import { heatMapData } from "../assets/dummyData/heatmap";
+import { heatMapData } from "../../assets/dummyData/heatmap";
 import CalendarHeatmap from "react-calendar-heatmap";
 import "../assets/css/heatmap-module.css";
 
@@ -19,7 +19,9 @@ export const CodingHeatMap: React.FC<CodingHeatMapProps> = ({ mode }) => {
 
   return (
     <div className="xl:py-10">
-      <h2 className="text-center text-xl xl:text-3xl py-5">Your Coding strikes</h2>
+      <h2 className="text-center text-xl xl:text-3xl py-5">
+        Your Coding strikes
+      </h2>
       <CalendarHeatmap
         startDate={new Date("2025-01-01")}
         endDate={new Date("2025-12-30")}

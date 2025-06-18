@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { FormProvider } from "react-hook-form";
-import { Input } from "./Input";
+import { Input } from "../Input";
 
 export const SignUpForm: React.FC = () => {
   const methods = useForm();

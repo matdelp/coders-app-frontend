@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "./pages/home/page";
 import { SignUpPage } from "./pages/signup/page";
-import { ProtectedRoute } from "./components/ProtectedPage";
+import { ProtectedRoute } from "./components/Authentication/ProtectedPage";
 import { UserOnlyPage } from "./pages/userOnly/page";
 import { SignInPage } from "./pages/signin/page";
 import { LeaderboardPage } from "./pages/leaderboard/page";
-import { ProfilPage } from "./pages/profile/ProfilePage";
+import { ProfilPage } from "./pages/profile/page";
 
 export const App = () => {
   return (

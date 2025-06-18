@@ -7,7 +7,7 @@ import {
   SignSharedlayout,
   type SignPagesProp,
 } from "../../layout/SignSharedlayout";
-import { SignInForm } from "../../components/SignInForm";
+import { SignInForm } from "../../components/Authentication/SignInForm";
 
 export const SignInPage: React.FC = () => {
   const signInProps: SignPagesProp = {
