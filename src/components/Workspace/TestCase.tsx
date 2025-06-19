@@ -21,7 +21,9 @@ export const TestCase: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-2 p-2 xl:p-5">
-      <p className="text-xs xl:text-lg border-b-2 border-b-main-500 w-fit">Testcases</p>
+      <p className="text-xs xl:text-lg border-b-2 border-b-main-500 dark:border-b-main-100 w-fit">
+        Testcases
+      </p>
       <div className="flex flex-row gap-2">
         {ExChallenge.tests.map((test, id) => (
           <>
@@ -43,16 +45,20 @@ export const TestCase: React.FC = () => {
       {caseId && (
         <form className="flex flex-col gap-3">
           <div className="gap-1">
-            <label htmlFor="input" className="text-md">Input:</label>
+            <label htmlFor="input" className="text-md">
+              Input:
+            </label>
             <input
               id="input"
               value={caseId.inputText}
               readOnly
-              className="bg-main-100 p-2 rounded-md w-full text-sm xl:text-lg"
+              className="bg-main-100 dark:bg-background-500 dark:text-main-100 p-2 rounded-md w-full text-sm xl:text-lg"
             ></input>
           </div>
           <div>
-            <label htmlFor="output" className="text-md">Output:</label>
+            <label htmlFor="output" className="text-md">
+              Output:
+            </label>
             <input
               id="output"
               value={caseId.outputText}
