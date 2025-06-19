@@ -14,3 +14,9 @@
   width: 100%;
   cursor: row-resize;
 }
+
+@media (prefers-color-scheme: dark) {
+  .gutter {
+    background-color: #23155b;
+  }
+}

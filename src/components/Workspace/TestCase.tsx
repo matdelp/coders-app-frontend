@@ -63,7 +63,7 @@ export const TestCase: React.FC = () => {
               id="output"
               value={caseId.outputText}
               readOnly
-              className="bg-main-100 p-2 rounded-md w-full text-sm xl:text-lg"
+              className="bg-main-100  dark:bg-background-500 dark:text-main-100 p-2 rounded-md w-full text-sm xl:text-lg"
             ></input>
           </div>
           <div className="flex justify-end">
