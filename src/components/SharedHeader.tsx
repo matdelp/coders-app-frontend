@@ -6,7 +6,7 @@ import user from "../assets/images/user.png";
 
 export const SharedHeader: React.FC = () => {
   return (
-    <header className="flex justify-between py-3 xl:py-5 px-2 xl:px-4  bg-main-100 dark:bg-background-500 dark:text-main-100">
+    <nav className="flex justify-between py-3 xl:py-5 px-2 xl:px-4  bg-main-100 dark:bg-background-500 dark:text-main-100">
       <div className="flex flex-col xl:flex-row gap-3 xl:gap-5 items-start xl:items-center">
         <div className="flex gap-2 items-center">
           <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
@@ -29,10 +29,11 @@ export const SharedHeader: React.FC = () => {
         <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
           <img src={user} alt="user" className="object-cover rounded-full" />
         </div>
+        <p>Jane Doe</p>
         <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
           <MdLightMode />
         </div>
       </div>
-    </header>
+    </nav>
   );
 };
