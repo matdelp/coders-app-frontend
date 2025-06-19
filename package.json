@@ -10,12 +10,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/commands": "^6.8.1",
+    "@codemirror/lang-javascript": "^6.2.4",
+    "@codemirror/lang-python": "^6.2.1",
+    "@codemirror/search": "^6.5.11",
     "@tailwindcss/vite": "^4.1.10",
     "@uiw/react-markdown-preview": "^5.1.4",
     "codemirror": "^5.65.19",
     "react": "^18.3.1",
     "react-calendar-heatmap": "^1.10.0",
-    "react-codemirror2": "^8.0.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.6.2",
@@ -26,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@types/codemirror": "^5.60.16",
     "@types/react": "^19.1.2",
     "@types/react-calendar-heatmap": "^1.9.0",
     "@types/react-dom": "^19.1.2",
