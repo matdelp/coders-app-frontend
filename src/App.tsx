@@ -7,6 +7,8 @@ import { UserOnlyPage } from "./pages/userOnly/page";
 import { SignInPage } from "./pages/signin/page";
 import { LeaderboardPage } from "./pages/leaderboard/page";
 import { ProfilPage } from "./pages/profile/page";
+import { useThemeStore } from "./store/useThemeStore";
+import { WorkspacePage } from "./pages/workspace/page";
 
 export const App = () => {
   const { darkMode } = useThemeStore();
