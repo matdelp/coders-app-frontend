@@ -32,7 +32,7 @@ export const SharedHeader: React.FC = () => {
         <div className="relative">
           <div className="flex items-center justify-center gap-2">
             <button onClick={() => setShowMenu((prev) => !prev)}>
-              <div className="flex xl:h-10 xl:w-10 h-7 w-7">
+              <div className="flex xl:h-10 xl:w-10 h-7 w-7 cursor-pointer">
                 <img
                   src={user}
                   alt="user"
