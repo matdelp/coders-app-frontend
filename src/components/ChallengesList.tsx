@@ -13,9 +13,11 @@ export const ChallengesList: React.FC = () => {
     "Solution Rate",
   ];
   const setColorToDifficulty = (difficulty: string): string => {
-    if (difficulty === "Easy") return "p-1 bg-green-400 rounded-md w-20";
-    if (difficulty === "Moderate") return "p-1 bg-amber-400 rounded-md w-20";
-    return "p-1 bg-red-400 rounded-md w-20";
+    if (difficulty === "Easy")
+      return "p-1 bg-green-400 rounded-md w-20 text-black";
+    if (difficulty === "Moderate")
+      return "p-1 bg-amber-400 rounded-md w-20 text-black";
+    return "p-1 bg-red-400 rounded-md w-20 text-black";
   };
   const setIconToStatus = (status: string): React.ReactNode => {
     if (status === "Completed")
@@ -29,7 +31,10 @@ export const ChallengesList: React.FC = () => {
       <thead>
         <tr>
           {tableHeaders.map((header, index) => (
-            <th key={index} className="p-2 bg-main-100 dark:bg-main-300 text-center">
+            <th
+              key={index}
+              className="p-2 bg-main-100 dark:bg-main-300 text-center"
+            >
               {header}
             </th>
           ))}
