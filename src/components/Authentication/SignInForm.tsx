@@ -16,7 +16,7 @@ export const SignInForm: React.FC = () => {
         <form
           onSubmit={(e) => e.preventDefault()}
           noValidate
-          className="flex flex-col items-center justify-center gap-3 w-full"
+          className="flex flex-col items-center justify-center gap-3 w-full "
           action=""
           method="post"
         >
@@ -24,13 +24,13 @@ export const SignInForm: React.FC = () => {
             type="email"
             id="email"
             placeholder="Email"
-            style="p-2 bg-background-500 rounded-md text-main-100 w-full"
+            style="p-2 bg-background-500 dark:bg-main-300 rounded-md text-main-100 w-full"
           />
           <Input
             type="password"
             id="password"
             placeholder="Password"
-            style="p-2 bg-background-500 rounded-md text-main-100 w-full"
+            style="p-2 bg-background-500 dark:bg-main-300 rounded-md text-main-100 w-full"
           />
           <button
             className="px-2 py-1 bg-blue-500 rounded-md text-main-100 w-full cursor-pointer"

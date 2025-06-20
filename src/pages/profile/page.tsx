@@ -18,7 +18,7 @@ export const ProfilPage: React.FC = () => {
   };
 
   return (
-    <div className="bg-background-100 dark:bg-main-500 dark:text-main-100 font-semibold xl:text-xl min-h-screen min-w-screen">
+    <div className="bg-background-100 dark:bg-main-700 dark:text-main-100 font-semibold xl:text-xl min-h-screen min-w-screen">
       <SharedHeader />
       <div className="p-5 flex gap-5 flex-col xl:flex-row w-full">
         <div className="flex flex-2 flex-col gap-5 p-5">
