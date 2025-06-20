@@ -68,7 +68,9 @@ export const SharedHeader: React.FC = () => {
           )}
         </div>
         <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
-          <MdLightMode />
+          <button className="cursor-pointer">
+            <MdLightMode />
+          </button>
         </div>
       </div>
     </nav>
