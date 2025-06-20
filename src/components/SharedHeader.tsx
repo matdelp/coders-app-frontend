@@ -3,13 +3,15 @@ import { NavLink } from "react-router-dom";
 import { MdLightMode } from "react-icons/md";
 import logo from "../assets/images/logo.svg";
 import user from "../assets/images/user.png";
-
+import { useThemeStore } from "../store/useThemeStore";
 const USERNAME = "Jane Doe"; //TEMPORARY
 export const SharedHeader: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
+  const { darkMode, toggleDarkMode } = useThemeStore();
+  console.log(darkMode);
 
   return (
-    <nav className="flex justify-between py-3 xl:py-5 px-2 xl:px-4  bg-main-100 dark:bg-background-500 dark:text-main-100">
+    <nav className="flex justify-between py-3 xl:py-5 px-2 xl:px-4   dark:bg-background-500 bg-main-100 dark:text-main-100">
       <div className="flex flex-col xl:flex-row gap-3 xl:gap-5 items-start xl:items-center">
         <div className="flex gap-2 items-center">
           <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
@@ -62,7 +64,7 @@ export const SharedHeader: React.FC = () => {
           )}
         </div>
         <div className="flex xl:h-10 xl:w-10 h-7 w-7 items-center justify-center">
-          <button className="cursor-pointer">
+          <button className="cursor-pointer" onClick={toggleDarkMode}>
             <MdLightMode />
           </button>
         </div>
