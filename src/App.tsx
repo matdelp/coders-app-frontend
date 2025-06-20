@@ -8,6 +8,7 @@ import { SignInPage } from "./pages/signin/page";
 import { LeaderboardPage } from "./pages/leaderboard/page";
 import { ProfilPage } from "./pages/profile/page";
 import { useThemeStore } from "./store/useThemeStore";
+import { WorkspacePage } from "./pages/workspace/page";
 
 export const App = () => {
   const { darkMode } = useThemeStore();
@@ -28,6 +29,7 @@ export const App = () => {
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/signin" element={<SignInPage />} />
         <Route path="/leaderboard" element={<LeaderboardPage />} />
+        <Route path="/workspace" element={<WorkspacePage />} />
         <Route path="/profile/:userId" element={<ProfilPage />} />
         <Route
           path="/useronly"

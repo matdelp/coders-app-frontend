@@ -1,0 +1,21 @@
+.wmde-markdown {
+  background-color: transparent;
+  color: black;
+  font-size: 0.6rem;
+  padding: 1rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+@media (min-width: 1024px) {
+  .wmde-markdown {
+    font-size: small;
+    max-width: 800px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .wmde-markdown {
+    color: #cbd5e1;
+  }
+}
