@@ -14,14 +14,14 @@ export const SignSharedlayout: React.FC<SignPagesProp> = (params) => {
       <div className="flex items-center justify-center bg-background-500">
         <img src="src/assets/images/coding.png" alt="coding icon" />
       </div>
-      <div className="flex flex-col items-center justify-center bg-background-100 w-full">
+      <div className="flex flex-col items-center justify-center bg-background-100  dark:bg-main-700 w-full dark:text-main-100 ">
         <div className="flex flex-col items-center justify-center xl:bg-white p-10 rounded-xl xl:w-1/2 w-full">
-          <h2 className="text-main-500 text-xl py-5">{params.title}</h2>
+          <h2 className="text-main-500 dark:text-main-100 text-xl py-5">{params.title}</h2>
           {params.children}
           <p className="py-1">
             {params.message}
             {"  "}
-            <NavLink className="text-main-500" to={params.path}>
+            <NavLink className="text-main-500 dark:text-main-100 " to={params.path}>
               {params.link}
             </NavLink>
           </p>
