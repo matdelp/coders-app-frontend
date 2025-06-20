@@ -4,6 +4,7 @@ import { MdLightMode } from "react-icons/md";
 import logo from "../assets/images/logo.svg";
 import user from "../assets/images/user.png";
 
+const USERNAME = "Jane Doe"; //TEMPORARY
 export const SharedHeader: React.FC = () => {
   const [showMenu, setShowMenu] = useState(false);
 
@@ -18,7 +19,7 @@ export const SharedHeader: React.FC = () => {
             <p className="xl:text-xl text-xs font-semibold">CodeCla</p>
             <ul className="flex gap-3 xl:gap-5 xl:text-xl text-xs font-semibold">
               <li>
-                <NavLink to="/challenges">Challenges</NavLink>
+                <NavLink to="/">Challenges</NavLink>
               </li>
               <li>
                 <NavLink to="/leaderboard">Leaderboard</NavLink>
@@ -39,26 +40,19 @@ export const SharedHeader: React.FC = () => {
                 />
               </div>
             </button>
-            <p>Jane Doe</p>
+            <p>{USERNAME}</p>
           </div>
 
           {!showMenu ? (
             ""
           ) : (
             <ul className="absolute left-0 -bottom bg-main-100 text-black rounded-md">
-              <li
-                onClick={() => {
-                  alert("Profile clicked"); //temporary, TODO navigate to profile page when implemented
-                  setShowMenu((prev) => !prev);
-                }}
-                className="cursor-pointer hover:bg-main-500 p-2 rounded-md"
-              >
-                Profile
+              <li className="cursor-pointer hover:bg-main-500 p-2 rounded-md">
+                <NavLink to={`/profile/${USERNAME}`}>Profile</NavLink>
               </li>
               <li
                 onClick={() => {
                   alert("Log Out !"); //temporary, TODO change auth token when implemented
-                  setShowMenu((prev) => !prev);
                 }}
                 className="cursor-pointer hover:bg-main-500 p-2 rounded-md"
               >
