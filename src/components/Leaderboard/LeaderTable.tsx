@@ -7,7 +7,7 @@ type LeaderTableProps = {
 
 export const LeaderTable: React.FC<LeaderTableProps> = ({ data }) => {
   return (
-    <table className="w-full text-center font-medium shadow-lg table-auto">
+    <table className="w-full text-center text-xs font-medium shadow-lg table-auto">
       <thead>
         <tr className="h-10">
           <th className="font-medium">Rank</th>
