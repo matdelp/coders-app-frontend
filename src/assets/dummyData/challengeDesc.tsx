@@ -34,16 +34,16 @@ table in constant time, reducing the time complexity to O(n).`, // md content,
       {
         id: 1,
         input: {}, // Not used here
-        inputText: `[1, 2, 3]`,
+        inputText: [1, 2, 3],
         output: {}, // Not used here
-        outputText: `6`,
+        outputText: 6,
       },
       {
         id: 2,
         input: {}, // Not used here
-        inputText: `[2, 3]`,
+        inputText: [2, 3],
         output: {}, // Not used here
-        outputText: `5`,
+        outputText: 5,
       },
     ],
   },
