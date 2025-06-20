@@ -1,5 +1,5 @@
 .wmde-markdown {
-  background-color: #e5e7eb;
+  background-color: transparent;
   color: black;
   font-size: 0.6rem;
   padding: 1rem;
@@ -16,7 +16,6 @@
 
 @media (prefers-color-scheme: dark) {
   .wmde-markdown {
-    background-color: #4322c9a3;
-    color:  #cbd5e1;
+    color: #cbd5e1;
   }
 }

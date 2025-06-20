@@ -10,7 +10,7 @@ export const ChallengeDescription: React.FC = () => {
   return (
     <>
       <div className="flex justify-between p-2">
-        <h2 className="font-bold text-xl">{source.title}</h2>
+        <h2 className="font-bold text-xl dark:text-main-100">{source.title}</h2>
         <div className="flex items-center gap-2">
           <p className="bg-green-300 rounded-xl p-2 xl:text-md text-xs">
             {source.difficulty}

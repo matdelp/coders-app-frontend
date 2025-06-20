@@ -2,7 +2,7 @@ import React from "react";
 import { TestCase } from "./TestCase";
 import Split from "react-split";
 import "../../assets/css/split-module.css";
-import { CodeEditorBasic } from "./CodeEditorBasic";
+import { NewCodeEditor } from "./NewCodeEditor";
 
 export const Playground: React.FC = () => {
   return (
@@ -20,7 +20,7 @@ export const Playground: React.FC = () => {
         className="flex flex-col "
       >
         <div className="h-full overflow-auto">
-          <CodeEditorBasic />
+          <NewCodeEditor />
         </div>
         <div className="h-full overflow-auto">
           <TestCase />

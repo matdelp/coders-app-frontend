@@ -21,7 +21,7 @@ export const TestCase: React.FC = () => {
 
   return (
     <div className="flex flex-col gap-2 p-2 xl:p-5">
-      <p className="text-xs xl:text-lg border-b-2 border-b-main-500 dark:border-b-main-100 w-fit">
+      <p className="text-xs xl:text-lg border-b-2 border-b-main-500 dark:border-b-main-100 dark:text-main-100 w-fit">
         Testcases
       </p>
       <div className="flex flex-row gap-2">
@@ -29,10 +29,10 @@ export const TestCase: React.FC = () => {
           <>
             <button
               key={id}
-              className={`px-4 py-2 rounded text-xs xl:text-sm font-medium cursor-pointer
+              className={`px-4 py-2 rounded text-xs xl:text-sm font-medium cursor-pointer 
               ${
                 caseId?.id === test.id
-                  ? "bg-main-500 text-white"
+                  ? "bg-main-500 text-main-100"
                   : "bg-main-100"
               }`}
               onClick={() => setCaseId(test)}
@@ -45,7 +45,7 @@ export const TestCase: React.FC = () => {
       {caseId && (
         <form className="flex flex-col gap-3">
           <div className="gap-1">
-            <label htmlFor="input" className="text-md">
+            <label htmlFor="input" className="text-md dark:text-main-100">
               Input:
             </label>
             <input
@@ -56,7 +56,7 @@ export const TestCase: React.FC = () => {
             ></input>
           </div>
           <div>
-            <label htmlFor="output" className="text-md">
+            <label htmlFor="output" className="text-md dark:text-main-100">
               Output:
             </label>
             <input
