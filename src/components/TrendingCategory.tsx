@@ -9,10 +9,10 @@ export const TrendingCategory: React.FC = () => {
         {trend.map((category, index) => (
           <div
             key={index}
-            className="bg-main-100 rounded-xl flex gap-1 p-2 items-center"
+            className="bg-main-100 dark:bg-main-300 rounded-xl flex gap-1 p-2 items-center"
           >
             {category.category}{" "}
-            <p className="bg-green-500 rounded-lg flex text-xs p-1">
+            <p className="bg-green-500 dark:bg-green-800 rounded-lg flex text-xs p-1">
               {" "}
               {category.count}
             </p>

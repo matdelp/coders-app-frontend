@@ -6,7 +6,7 @@ type CoderCardProps = {
 };
 export const CoderCard: React.FC<CoderCardProps> = ({ data }) => {
   return (
-    <div className="flex bg-main-100 p-2 rounded-xl w-full">
+    <div className="flex bg-main-100 dark:bg-main-300 p-2 rounded-xl w-full">
       <div className="flex justify-between w-full items-center">
         <div className="flex items-center gap-2">
           <div className="w-10 h-10">

@@ -29,7 +29,7 @@ export const ChallengesList: React.FC = () => {
       <thead>
         <tr>
           {tableHeaders.map((header, index) => (
-            <th key={index} className="p-2 bg-main-100 text-center">
+            <th key={index} className="p-2 bg-main-100 dark:bg-main-300 text-center">
               {header}
             </th>
           ))}

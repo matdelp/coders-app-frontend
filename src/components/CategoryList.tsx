@@ -11,8 +11,8 @@ export const CategoryList: React.FC = () => {
           className={`rounded-md py-2 px-3 cursor-pointer
              ${
                active === index
-                 ? "bg-main-500 text-main-100"
-                 : "bg-main-100 text-black hover:bg-main-500"
+                 ? "bg-main-300 text-main-100 dark:bg-main-500"
+                 : "bg-main-100 text-black hover:bg-main-300 dark:bg-main-300 dark:text-main-100 dark:hover:bg-main-500"
              }`}
           key={index}
         >
