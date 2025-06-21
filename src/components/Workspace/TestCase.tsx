@@ -33,7 +33,7 @@ export const TestCase: React.FC<TestCaseProps> = ({ code }) => {
 
   return (
     <div className="flex flex-col gap-2 p-2 xl:p-5">
-      <p className="text-xs xl:text-lg border-b-2 border-b-main-500 dark:border-b-main-100 dark:text-main-100 w-fit">
+      <p className="text-xs xl:text-lg border-b-2 font-semibold border-b-main-500 dark:border-b-main-100 dark:text-main-100 w-fit">
         Testcases
       </p>
       <div className="flex flex-row gap-2">

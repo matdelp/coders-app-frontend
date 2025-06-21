@@ -38,11 +38,5 @@
 
 .react-calendar-heatmap text {
   font-size: 0.75rem;
-  fill: #888;
-}
-
-@media (prefers-color-scheme: dark) {
-  .react-calendar-heatmap text {
-    fill: #e2dddd;
-  }
+  fill: rgb(163, 160, 160);
 }

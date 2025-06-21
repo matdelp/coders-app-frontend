@@ -6,11 +6,13 @@ import { ChallengesTracker } from "../../components/Profile/ChallengesTracker";
 import { challenges } from "../../assets/dummyData/challenges";
 import { CodingHeatMap } from "../../components/Profile/CodingHeatMap";
 import { ProfileForm } from "../../components/Profile/ProfileForm";
+import useThemeStore from "../../store/useThemeStore";
 
 const addUpperCase = (str: string): string =>
   str.charAt(0).toUpperCase() + str.slice(1);
 
 export const ProfilPage: React.FC = () => {
+  const { theme } = useThemeStore();
   const { userId } = useParams();
   const renderName = (userId: string | undefined): string => {
     const [firstName = "", lastName = ""] = userId?.split("_") || [];
@@ -35,7 +37,7 @@ export const ProfilPage: React.FC = () => {
         </div>
         <div className="flex flex-col flex-1 gap-4 xl:gap-6">
           <ChallengesTracker data={challenges} />
-          <CodingHeatMap mode={"dark"} />
+          <CodingHeatMap mode={theme} />
         </div>
       </div>
     </div>

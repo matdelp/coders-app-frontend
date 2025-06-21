@@ -21,10 +21,10 @@ export const WorkspacePage: React.FC = () => {
         cursor="col-resize"
         className="flex h-full"
       >
-        <div className="bg-background-100 dark:bg-main-500 h-full overflow-auto">
+        <div className="bg-background-100 dark:bg-main-700 h-full overflow-auto">
           <ChallengeDescription />
         </div>
-        <div className="bg-background-100  dark:bg-main-500 h-full overflow-auto">
+        <div className="bg-background-100  dark:bg-main-700 h-full overflow-auto">
           <Playground />
         </div>
       </Split>

@@ -10,7 +10,7 @@ type CodeEditorProps = {
 export const NewCodeEditor: React.FC<CodeEditorProps> = ({ code, setData }) => {
   return (
     <div>
-      <h2>Code Challenge</h2>
+      <h2 className="dark:text-main-100 font-bold p-5">Code Challenge</h2>
       <CodeMirror
         className=""
         value={code}
