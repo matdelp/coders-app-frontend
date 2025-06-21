@@ -7,14 +7,17 @@ import { SignInPage } from "./pages/signin/page";
 import { LeaderboardPage } from "./pages/leaderboard/page";
 import { ProfilPage } from "./pages/profile/page";
 import { WorkspacePage } from "./pages/workspace/page";
+import useThemeStore from "./store/useThemeStore";
 
 export const App = () => {
+  const { theme } = useThemeStore();
   document.documentElement.classList.toggle(
     "dark",
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches)
+        window.matchMedia("(prefers-color-scheme: light)").matches)
   );
+  localStorage.theme = theme;
 
   return (
     <BrowserRouter>

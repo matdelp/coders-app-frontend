@@ -1,23 +1,20 @@
 import { create } from "zustand";
 
-const getInitialTheme = () => {
-  if (typeof window !== "undefined") {
-    return localStorage.getItem("darkMode") === "true";
-  }
-  return false;
-};
+type Theme = "dark" | "light";
 
 interface ThemeState {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
+  theme: Theme;
+  toggleTheme: () => void;
 }
 
-export const useThemeStore = create<ThemeState>((set) => ({
-  darkMode: getInitialTheme(),
-  toggleDarkMode: () =>
+const useThemeStore = create<ThemeState>((set) => ({
+  theme: "dark",
+  toggleTheme: () =>
     set((state) => {
-      const newMode = !state.darkMode;
-      localStorage.theme = state.darkMode ? "light" : "dark";
-      return { darkMode: newMode };
+      const newTheme: Theme = state.theme === "dark" ? "light" : "dark";
+      localStorage.setItem("theme", newTheme);
+      return { theme: newTheme };
     }),
 }));
+
+export default useThemeStore;
