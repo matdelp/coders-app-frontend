@@ -37,7 +37,7 @@ export const SignInForm: React.FC = () => {
             type="submit"
             onClick={onSubmit}
           >
-            Sign Up
+            Login
           </button>
         </form>
       </FormProvider>
