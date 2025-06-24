@@ -88,7 +88,7 @@ export const TestCase: React.FC<TestCaseProps> = ({ code, language }) => {
           </button>
         </div>
       </form>
-      <pre>{results}</pre>
+      <pre className="dark:text-main-100">{results}</pre>
     </div>
   );
 };
