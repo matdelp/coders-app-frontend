@@ -1,6 +1,6 @@
 import React from "react";
 import CodeMirror from "@uiw/react-codemirror";
-import { javascript } from "@codemirror/lang-javascript";
+import { langs } from "@uiw/codemirror-extensions-langs";
 
 type CodeEditorProps = {
   code: string;
@@ -15,7 +15,7 @@ export const NewCodeEditor: React.FC<CodeEditorProps> = ({ code, setData }) => {
         className=""
         value={code}
         height="200px"
-        extensions={[javascript()]}
+        extensions={[langs.jsx(), langs.python()]}
         onChange={(value) => {
           setData(value);
         }}
