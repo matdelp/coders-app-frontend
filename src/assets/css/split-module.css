@@ -15,8 +15,6 @@
   cursor: row-resize;
 }
 
-@media (prefers-color-scheme: dark) {
-  .gutter {
-    background-color: #23155b;
-  }
+html.dark .gutter {
+  background-color: #23155b;
 }
