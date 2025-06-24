@@ -6,6 +6,7 @@ import { NewCodeEditor } from "./NewCodeEditor";
 
 export const Playground: React.FC = () => {
   const [code, setCode] = useState(`// Type your code here`);
+  const [language, setLanguage] = useState("javascript");
   return (
     <div className="h-full w-full">
       <Split
@@ -21,10 +22,15 @@ export const Playground: React.FC = () => {
         className="flex flex-col "
       >
         <div className="h-full overflow-auto">
-          <NewCodeEditor code={code} setData={setCode} />
+          <NewCodeEditor
+            code={code}
+            setData={setCode}
+            language={language}
+            setLanguage={setLanguage}
+          />
         </div>
         <div className="h-full overflow-auto">
-          <TestCase code={code} />
+          <TestCase code={code} language={language} />
         </div>
       </Split>
     </div>

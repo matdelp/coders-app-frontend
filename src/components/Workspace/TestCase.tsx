@@ -6,16 +6,21 @@ const tests = ExChallenge.tests;
 
 type TestCaseProps = {
   code: string;
+  language: string;
 };
 
-export const TestCase: React.FC<TestCaseProps> = ({ code }) => {
+export const TestCase: React.FC<TestCaseProps> = ({ code, language }) => {
   const [caseId, setCaseId] = useState<number>(0);
   const [results, setResults] = useState("");
 
   const runCode = (testIndex: number) => {
+    if (language !== "javascript") {
+      setResults("Code execution only supported for JavaScript.");
+      return; // Didn't manage to implement python as a running language for testCases ...
+    }
     let finalOutput = "";
     try {
-      const fn = new Function(`${code}; return solution;`)(); // Return the solution function
+      const fn = new Function(`${code}; return solution;`)();
       const input = tests[testIndex].inputText;
       const output = tests[testIndex].outputText;
       const actual = fn(input);
@@ -24,7 +29,7 @@ export const TestCase: React.FC<TestCaseProps> = ({ code }) => {
       finalOutput += `Output: ${output}, Got: ${actual} -> ${
         passed ? "✅ Passed" : "❌ Failed"
       }\n\n`;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       finalOutput = "Invalid Code";
     }
