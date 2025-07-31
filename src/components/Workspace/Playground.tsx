@@ -3,10 +3,14 @@ import { TestCase } from "./TestCase";
 import Split from "react-split";
 import "../../assets/css/split-module.css";
 import { NewCodeEditor } from "./NewCodeEditor";
+import type { Challenge } from "../../types/Challenge";
 
-export const Playground: React.FC = () => {
+type PlaygroundProps = {
+  challenge: Challenge;
+};
+export const Playground: React.FC<PlaygroundProps> = ({ challenge }) => {
   const [code, setCode] = useState(`// Type your code here`);
-  const [language, setLanguage] = useState("javascript");
+  const [language, setLanguage] = useState("js");
   return (
     <div className="h-full w-full">
       <Split
@@ -30,7 +34,7 @@ export const Playground: React.FC = () => {
           />
         </div>
         <div className="h-full overflow-auto">
-          <TestCase code={code} language={language} />
+          <TestCase code={code} language={language} tests={challenge.test} />
         </div>
       </Split>
     </div>

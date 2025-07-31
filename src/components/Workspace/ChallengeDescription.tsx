@@ -1,24 +1,35 @@
-import React from "react";
 import MarkdownPreview from "@uiw/react-markdown-preview";
-import { challenges } from "../../assets/dummyData/challengeDesc";
+import React from "react";
 import { FiCheckCircle } from "react-icons/fi";
 import "../../assets/css/markdown-module.css";
+import type { Challenge } from "../../types/Challenge";
+import { getStatusFromChallenge } from "../../utils/getChallengeStatus";
 
-const source = challenges[0]; //replace later with connection to backend
+type ChallengeDescriptionProps = {
+  challenge: Challenge;
+};
 
-export const ChallengeDescription: React.FC = () => {
+export const ChallengeDescription: React.FC<ChallengeDescriptionProps> = ({
+  challenge,
+}) => {
   return (
     <>
       <div className="flex justify-between p-2">
-        <h2 className="font-bold text-xl dark:text-main-100">{source.title}</h2>
+        <h2 className="font-bold text-xl dark:text-main-100">
+          {challenge.title}
+        </h2>
         <div className="flex items-center gap-2">
           <p className="bg-green-300 rounded-xl p-2 xl:text-md text-xs">
-            {source.difficulty}
+            {challenge.level}
           </p>
-          <p>{source.status === "Completed" ? <FiCheckCircle /> : null}</p>
+          <p>
+            {getStatusFromChallenge(challenge) === "Completed" ? (
+              <FiCheckCircle />
+            ) : null}
+          </p>
         </div>
       </div>
-      <MarkdownPreview source={source.description} />
+      <MarkdownPreview source={challenge.description} />
     </>
   );
 };
