@@ -30,7 +30,32 @@ export const gqlApi = createApi({
     `,
       }),
     }),
+    getChallenges: builder.query<
+      {
+        challenges: {
+          status: string;
+          title: string;
+          category: string;
+          level: string;
+          submission: { status: string }[];
+        }[];
+      },
+      void
+    >({
+      query: () => ({
+        document: `query GetAllChallenges {
+            challenges {
+            title
+            category
+            level
+            submission {status}
+            }
+        }
+    `,
+      }),
+    }),
   }),
 });
 
 export const { useGetCategoriesQuery } = gqlApi;
+export const { useGetChallengesQuery } = gqlApi;

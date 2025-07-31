@@ -1,10 +1,17 @@
 import React from "react";
-import { challengeList } from "../assets/dummyData/challengesList";
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { BiHourglass } from "react-icons/bi";
 import { HiOutlineClipboardDocumentList } from "react-icons/hi2";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { useGetChallengesQuery } from "../hooks/apiGraphqlRequest";
+import { getStatusFromChallenge } from "../utils/getChallengeStatus";
 
 export const ChallengesList: React.FC = () => {
+  const { data, isLoading, error } = useGetChallengesQuery();
+
+  if (isLoading) return <p>Loading challenges...</p>;
+  if (error) return <p>Error loading challenges.</p>;
+
+  const challengeList = data?.challenges || [];
   const tableHeaders: string[] = [
     "Status",
     "Title",
@@ -44,16 +51,16 @@ export const ChallengesList: React.FC = () => {
         {challengeList.map((challenge, index) => (
           <tr key={index} className="border-b border-main-100 text-center">
             <td className="p-2 flex justify-center">
-              {setIconToStatus(challenge.status)}
+              {setIconToStatus(getStatusFromChallenge(challenge))}
             </td>
             <td className="p-2">{challenge.title}</td>
             <td className="p-2">{challenge.category}</td>
             <td className="p-2 flex justify-center">
-              <p className={setColorToDifficulty(challenge.difficulty)}>
-                {challenge.difficulty}
+              <p className={setColorToDifficulty(challenge.level)}>
+                {challenge.level}
               </p>
             </td>
-            <td className="p-2">{challenge.solutionRate}</td>
+            <td className="p-2">solutionRate</td>
           </tr>
         ))}
       </tbody>
