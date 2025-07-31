@@ -1,8 +1,14 @@
 import React, { useState } from "react";
-import { categories } from "../assets/dummyData/categories";
+import { useGetCategoriesQuery } from "../hooks/apiGraphqlRequest";
 
 export const CategoryList: React.FC = () => {
   const [active, setActive] = useState(0);
+  const { data, isLoading, error } = useGetCategoriesQuery();
+
+  if (isLoading) return <p>Loading categories...</p>;
+  if (error) return <p>Error loading categories.</p>;
+
+  const categories = data?.categories || [];
   return (
     <div className="flex gap-2 p-2 ">
       {categories.map((category, index) => (
@@ -16,7 +22,7 @@ export const CategoryList: React.FC = () => {
              }`}
           key={index}
         >
-          {category}{" "}
+          {category.name}{" "}
         </div>
       ))}
     </div>
