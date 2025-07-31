@@ -14,5 +14,23 @@ export const gqlApi = createApi({
       return headers;
     },
   }),
-  endpoints: () => ({}),
+  endpoints: (builder) => ({
+    getCategories: builder.query<
+      { categories: { name: string; count: number }[] },
+      void
+    >({
+      query: () => ({
+        document: `
+      query GetAllCategories {
+        categories {
+          name
+          count
+        }
+      }
+    `,
+      }),
+    }),
+  }),
 });
+
+export const { useGetCategoriesQuery } = gqlApi;
